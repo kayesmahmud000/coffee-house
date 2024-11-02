@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar backdrop-blur-3xl fixed z-50 container mx-auto pr-16 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,18 +23,19 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 gap-5 p-2 shadow">
-                        <Link to="/">Home</Link>
-                        <Link to="/coffee">Coffee</Link>
-                        <Link to="/dashboard">Dashboard</Link>
+                        <NavLink to="/" className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`}>Home</NavLink>
+                        <NavLink to="/coffee" className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`}>Coffee</NavLink>
+                        <NavLink to="/dashboard" className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`}>Dashboard</NavLink>
+
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-xl">Coffee House</Link>
+                <NavLink to="/" className="btn btn-ghost text-xl">Coffee House</NavLink>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu gap-5 text-xl menu-horizontal px-1">
-                    <Link to="/">Home</Link>
-                    <Link to="/coffee">Coffee</Link>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <NavLink to="/" className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`}>Home</NavLink>
+                    <NavLink to="/coffee" className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`}>Coffee</NavLink>
+                    <NavLink to="/dashboard" className={({ isActive }) => `${isActive ? 'text-warning' : 'hover:text-warning'}`}>Dashboard</NavLink>
                 </ul>
             </div>
 

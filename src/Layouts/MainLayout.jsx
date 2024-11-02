@@ -5,9 +5,11 @@ import Navbar from "../Components/Navbar";
 
 const MainLayout = () => {
     return (
-        <div className=" container p-5 mx-auto">
+        <div className=" container  mx-auto">
             {/* Navbar */}
-            <Navbar></Navbar>
+           <div className="h-16">
+           <Navbar></Navbar>
+           </div>
             {/* Dynamic Layout */}
             <div className=" lg:min-h-[700px] py-10">
                 <Outlet></Outlet>
