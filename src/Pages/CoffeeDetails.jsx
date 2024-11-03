@@ -14,12 +14,14 @@ const CoffeeDetails = () => {
         setCoffee(findCoffee)
        
         const favorite=getStoredCoffee();
-        const isExist=favorite.find(item=>item.id ===coffee.id);
+       
+        const isExist=favorite.find(item=>item.id ===parseInt(id));
+        
         if(isExist){
           setIsFavorite(true)
         }
         
-    }, [allCoffee, id])
+    }, [allCoffee, id, isFavorite])
 
     const { name, image, description, making_process, ingredients, nutrition_info,  rating, popularity } = coffee;
 
@@ -28,6 +30,7 @@ const handleAddFavoriteBtn=(coffee)=>{
     addFavoriteCoffee(coffee)
    setIsFavorite(true) 
 }
+console.log(isFavorite)
 
     return (
         <div className="my-10">

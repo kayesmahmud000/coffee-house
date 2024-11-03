@@ -18,13 +18,13 @@ const Coffee = () => {
 
     return (
         <>
-        <div className='flex justify-between items-center my-16'>
+        <div className='lg:flex  justify-between items-center my-16'>
             <div>
-                <h1 className='text-4xl font-thin'>Short Coffee&apos;s by popularity & rating-&gt;</h1>
+                <h1 className=' text-3xl lg:text-4xl font-thin'>Short Coffee&apos;s by popularity & rating-&gt;</h1>
 
             </div>
-            <div>
-                <button onClick={()=>handleSortBtn('popularity')} className=' text-xl font-semibold btn btn-warning mr-4'>Short by Popularity </button>
+            <div  >
+                <button onClick={()=>handleSortBtn('popularity')} className=' text-xl font-semibold btn btn-warning mb-5 lg:mr-4'>Short by Popularity </button>
                 <button onClick={()=>handleSortBtn('rating')} className=' text-xl font-semibold btn btn-warning'>Short by Rating</button>
             </div>
         </div>
